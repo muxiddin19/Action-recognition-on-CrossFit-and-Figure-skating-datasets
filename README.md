@@ -17,7 +17,7 @@ python tools/train.py configs/skeleton/posec3d/custom.py --work-dir work_dirs/cu
 
 Json 파일에서도 오류를 제거한 뒤 다시 보내드리겠습니다.  .
 
-2. 위의 create_data.py로 만든 데이터 셋 [Link]
+2. 위의 create_data.py로 만든 데이터 셋 [Link https://drive.google.com/file/d/1X_LbRM7Li5SY3z1OL5ZOk20qO7VSifpG/view?usp=sharing]
 train.pkl / test.pkl: 정상 동작 데이터
 label_dict.pkl: Class 이름 dictionary
 모델을 돌리기 전 config file에 이용을 할 데이터의 path를 반드시 지정해주셔야 합니다. 
