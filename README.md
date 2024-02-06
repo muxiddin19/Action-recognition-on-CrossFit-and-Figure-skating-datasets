@@ -42,11 +42,11 @@ https://drive.google.com/drive/folders/127-hhaBebuUMqA38OxyMtLCrCzLjyYNA?usp=sha
 
 1) 샘플 데이터 수령
 이랜서 정재현 부장님께서 잠시 학교를 방문하시어
-크로스핏 샘플 데이터와 함께 오류분류체계 문서[[link](https://drive.google.com/file/d/1dSMwXUPjj5K3wykjQpT334gI_yhOfJtn/view?usp=sharing)][[link](https://drive.google.com/file/d/18I6hDHEiCdbDNsGb2CtE3S-MaTOYZ09v/view?usp=sharing)]를 전달해주셨습니다.
+크로스핏 샘플 데이터와 함께 오류분류체계 문서[[link]( https://drive.google.com/file/d/1dSMwXUPjj5K3wykjQpT334gI_yhOfJtn/view?usp=sharing )][[link]( https://drive.google.com/file/d/18I6hDHEiCdbDNsGb2CtE3S-MaTOYZ09v/view?usp=sharing )]를 전달해주셨습니다.
 샘플 데이터는 1명이 촬영한 것으로 각 카메라별 약 90개 (총 카메라 8대 = 약 720개)의 영상입니다.
 이랜서 측에 따르면, 전체 크로스핏 데이터는 60명이 촬영한 데이터로 구성될 것으로 예상되며,
 1 cycle 평가를 위한 데이터는 12명이 촬영한 데이터로 구성될 것으로 예상된다고 합니다.
-데이터에 대한 내용은 메일에 담기 복잡하여 구글 문서[[link](https://docs.google.com/document/d/1Z43uG2K3u-K-FpyuNZ2rZGVra3xBJa9eSH704Ma1FL4/edit?usp=sharing)]에 따로 정리하였습니다.
+데이터에 대한 내용은 메일에 담기 복잡하여 구글 문서[[link](https://docs.google.com/document/d/1Z43uG2K3u-K-FpyuNZ2rZGVra3xBJa9eSH704Ma1FL4/edit?usp=sharing )]에 따로 정리하였습니다.
  
 현재 alphapose를 활용하여 샘플 데이터로부터 스켈레톤을 추출하고 있습니다.
-스쿼트 영상에 대해 스켈레톤이 렌더링된 영상[linkhttps://drive.google.com/file/d/1yOdf2v6z2L6rQUPrRZovGQZkt91RDvFx/view?usp=sharing]과 스켈레톤 데이터[linkhttps://drive.google.com/file/d/1NTjOcqLnmnbnS3y5w_39qUCHKSLT-cjR/view?usp=sharing] 예시를 업로드하였습니다.
+스쿼트 영상에 대해 스켈레톤이 렌더링된 영상[linkhttps://drive.google.com/file/d/1yOdf2v6z2L6rQUPrRZovGQZkt91RDvFx/view?usp=sharing ]과 스켈레톤 데이터[linkhttps://drive.google.com/file/d/1NTjOcqLnmnbnS3y5w_39qUCHKSLT-cjR/view?usp=sharing ] 예시를 업로드하였습니다.
