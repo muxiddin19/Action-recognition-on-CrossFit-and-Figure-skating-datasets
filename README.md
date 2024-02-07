@@ -50,3 +50,51 @@ https://drive.google.com/drive/folders/127-hhaBebuUMqA38OxyMtLCrCzLjyYNA?usp=sha
  
 현재 alphapose를 활용하여 샘플 데이터로부터 스켈레톤을 추출하고 있습니다.
 스쿼트 영상에 대해 스켈레톤이 렌더링된 영상[link https://drive.google.com/file/d/1yOdf2v6z2L6rQUPrRZovGQZkt91RDvFx/view?usp=sharing ]과 스켈레톤 데이터[link https://drive.google.com/file/d/1NTjOcqLnmnbnS3y5w_39qUCHKSLT-cjR/view?usp=sharing ] 예시를 업로드하였습니다.
+
+
+This is the code that is post-processed to put the result from alphapose mentioned above into poseC3D.
+
+python create_data.py --folders 20220705 20220706 20220707 20220708 20220711 --trainset True --full True You should check all the details inside the code.
+
+Trainset True is a code that creates a csv and also creates a training set, so it has to be True to make a train test set, Full True is True: Make all normal error data.
+False: make only normal
+It's designed to be written like this.
+
+The data created by Trainset True is for PoseC3D and may be different from the data format desired by eLancers.
+
+The output of alphapose is in the form of a simple json file that does not contain metadata.
+First of all, there is a code to create a csv because the data type you want in eLancer can be csv.
+
+Alpha pose result data will be shared as soon as it is completed.
+If you share it, it seems that you can do post-processing work with the code given above.
+
+DATA CREATING
+python create_data_1v.py --folders 20220830~20220901 20220902 20220903 20220904 20220905 20220906 20220907  20220908 20220909 20220911 20220912 20220914 --full
+
+python create_data_1v.py --folders 20220705 20220706 20220707 20220708 20220711 20220725 20220726 20220727 20220728 20220729 20220801 20220802 20220803 20220804 20220805 20220808 20220809 20220810 20220811 20220812 20220816 20220817 20220818 20220819 20220822
+
+python create_data_1v.py --folders 20220902 20220903 20220904 20220906 20220907 20220908 20220909 20220911 20220912 --full
+
+python create_data_1cut.py --folders 20220705 20220706 20220707 20220708 20220711 20220725 20220726 20220727 20220728 20220729 20220801 20220802 20220803 20220804 20220805 20220808 20220809 20220810 20220811 20220812 20220816 20220817 20220818 20220819 20220822
+
+python create_data_1cut.py --folders 20220830 20220831 20220901 20220902 20220903 20220904 20220906 20220907 20220908 20220909 20220911 20220912
+
+
+
+TRAINING CODE
+python tools/train.py configs/skeleton/posec3d/elancer_full.py --work-dir work_dirs/custom --resume-from work_dirs/custom/epoch_50.pth --validate --test-best --gpus 2 --seed 0 --determi
+nistic
+
+python tools/train.py configs/skeleton/posec3d/elancer_only_normal.py --work-dir work_dirs/custom --validate --test-best --gpus 2 --seed 0 --deterministic
+
+python tools/train.py configs/skeleton/posec3d/elancer_only_normal.py --work-dir work_dirs/custom --validate --test-best --gpus 2 --seed 0 --deterministic
+
+python tools/train.py configs/skeleton/posec3d/elancer_only_normal.py --work-dir work_dirs/custom --validate --test-best --gpus 2 --seed 0 --deterministic
+
+
+TESTING CODE
+python tools/test.py data/crossfit_full/crossfit_full_config.py data/crossfit_full/crossfit_full_200.pth --eval top_k_accuracy mean_class_accuracy  --out result_cross_full_last.pkl
+
+python tools/test.py configs/skeleton/posec3d/elancer_only_normal.py work_dirs/custom/best_top1_acc_epoch_200.pth --eval top_k_accuracy mean_class_accuracy  --out result.pkl
+
+python tools/test.py configs/skeleton/posec3d/elancer_only_normal.py work_dirs/custom/best_top1_acc_epoch_200.pth --eval top_k_accuracy mean_class_accuracy  --out result.pkl
