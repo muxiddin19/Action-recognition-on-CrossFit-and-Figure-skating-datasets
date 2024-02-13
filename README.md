@@ -1,7 +1,7 @@
 # Action-recognition-on-CrossFit-and-Figure-skating-datasets
 This project was done while creating CrossFit and Figure skating datasets
 # Training 
-python tools/train.py configs/skeleton/posec3d/custom.py --work-dir work_dirs/custom --validate --test-best --gpus 2 --seed 0 --deterministic
+python tools/train.py configs/skeleton/posec3d/doppler_figure_full(norm).py --work-dir work_dirs/custom --validate --test-best --gpus 2 --seed 0 --deterministic
 
 1. 새로운 create_data.py
   Alphapose에서 예상 외의 것들이 잡히는 프레임이 소수 발견되었고, 이것으로 인해 버그가 발생하였습니다. 하여 해당 버그를 처리하며 데이터를 만드는 create_data.py를 첨부 드립니다. 
