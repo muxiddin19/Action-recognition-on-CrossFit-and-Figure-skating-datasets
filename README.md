@@ -98,3 +98,6 @@ python tools/test.py data/crossfit_full/crossfit_full_config.py data/crossfit_fu
 python tools/test.py configs/skeleton/posec3d/elancer_only_normal.py work_dirs/custom/best_top1_acc_epoch_200.pth --eval top_k_accuracy mean_class_accuracy  --out result.pkl
 
 python tools/test.py configs/skeleton/posec3d/elancer_only_normal.py work_dirs/custom/best_top1_acc_epoch_200.pth --eval top_k_accuracy mean_class_accuracy  --out result.pkl
+
+Resume interrupted training from the latest epoch:
+python tools/train.py configs/skeleton/posec3d/doppler_figure_norm.py --resume-from work_dirs/custom_doppler/epoch_20(latest).pth --work-dir work_dirs/custom_doppler --validate --test-best --gpus 2 --seed 0 --determini
