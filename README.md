@@ -100,4 +100,48 @@ python tools/test.py configs/skeleton/posec3d/elancer_only_normal.py work_dirs/c
 python tools/test.py configs/skeleton/posec3d/elancer_only_normal.py work_dirs/custom/best_top1_acc_epoch_200.pth --eval top_k_accuracy mean_class_accuracy  --out result.pkl
 
 Resume interrupted training from the latest epoch:
-python tools/train.py configs/skeleton/posec3d/doppler_figure_norm.py --resume-from work_dirs/custom_doppler/epoch_20(latest).pth --work-dir work_dirs/custom_doppler --validate --test-best --gpus 2 --seed 0 --determini
+python tools/train.py configs/skeleton/posec3d/doppler_figure_norm.py --resume-from work_dirs/custom_doppler/epoch_20(latest).pth --work-dir work_dirs/custom_doppler --validate --test-best --gpus 2 --seed 0 --deterministic
+
+I think I told you that you have "make" the code to create your train/valid/test data. the only reason I gave you the code is to help you understand, not just running code and done. Because you have all json files, you can and have to preprocess the data into the form that you want for your model. 
+
+to do that, of course you will already know, 
+you have to check the details of your given data (json files that we sent.): length of json files, number of classes of your data, and so on. and check all of your preprocessed data after you create.
+
+It is not my job to give you all ready-to-go data, which I actually gave you already (python code to create the data, and pkl files) because I wanted to help you. 
+
+ this is one that I gave to your lab
+https://drive.google.com/file/d/1PUUrvWkDaSlSQhtnymesGhS6qQatKZEf/view?usp=sharing
+
+but you can't just use this. you HAVE TO PREPROCESS by yourself. because elancer wants to split train, valid, test data which has different from than now. keep in mind it and create your own code.
+
+
+each folder contains 4 files. 
+
+which are 
+pth file for saved weights
+config.py file
+test pickle file
+validation pickle file https://drive.google.com/file/d/11Hp2n4K-u1674ddxvomFlP-0AcEmpwRl/view?usp=share_link
+
+I changed 20220905, 20220914 folders into right one and saved here.
+https://drive.google.com/drive/folders/16N--bblvs2vtoU4tcqduxrEk9aTA2WK1?usp=share_link
+
+https://github.com/open-mmlab/mmaction2/blob/master/docs/en/getting_started.md#training-setting
+check the site and resume it
+there should be way to start learning from last ended epoch
+
+this is the link to download whole json files for figure data.
+
+please use this data with metadata that you got few days ago.
+https://drive.google.com/file/d/1mdjZr_dfJEVzy7f1dsHaT9bcLkA5le96/view?usp=share_link
+
+each folder contains 4 files. 
+
+which are 
+pth file for saved weights
+config.py file
+test pickle file
+validation pickle file https://drive.google.com/file/d/11Hp2n4K-u1674ddxvomFlP-0AcEmpwRl/view?usp=share_link
+
+
+
