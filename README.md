@@ -81,9 +81,8 @@ python create_data_1cut.py --folders 20220830 20220831 20220901 20220902 2022090
 
 
 
-TRAINING CODE
-python tools/train.py configs/skeleton/posec3d/elancer_full.py --work-dir work_dirs/custom --resume-from work_dirs/custom/epoch_50.pth --validate --test-best --gpus 2 --seed 0 --determi
-nistic
+TRAINING CODE RESUME
+python tools/train.py configs/skeleton/posec3d/doppler_CF_full.py --work-dir work_dirs/custom_dopp_FC_full --resume-from work-dirs/custom_doppler/latest.pth --validate --test-best --gpus 2 --seed 0 --deterministic
 
 python tools/train.py configs/skeleton/posec3d/elancer_only_normal.py --work-dir work_dirs/custom --validate --test-best --gpus 2 --seed 0 --deterministic
 
