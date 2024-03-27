@@ -139,13 +139,7 @@ this is the link to download whole json files for figure data.
 please use this data with metadata that you got few days ago.
 https://drive.google.com/file/d/1mdjZr_dfJEVzy7f1dsHaT9bcLkA5le96/view?usp=share_link
 
-each folder contains 4 files. 
 
-which are 
-pth file for saved weights
-config.py file
-test pickle file
-validation pickle file https://drive.google.com/file/d/11Hp2n4K-u1674ddxvomFlP-0AcEmpwRl/view?usp=share_link
 
 
 
